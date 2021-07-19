@@ -18,7 +18,7 @@ samples$raw_file2 =           paste0(samples$sample_name, "_R2.fastq.gz")
 
 samples = samples[,-(1:2)] 
 head(samples)
-WriteXLS::WriteXLS(samples, "samples.xlsx")
+WriteXLS::WriteXLS(samples, "01_samples.xlsx")
 
 
 
@@ -36,7 +36,7 @@ proc_data_files$checksum = proc_data_files[,1]
 
 proc_data_files = proc_data_files[,-(1:2)] 
 head(proc_data_files)
-WriteXLS::WriteXLS(proc_data_files, "proc_data_files.xlsx")
+WriteXLS::WriteXLS(proc_data_files, "02_proc_data_files.xlsx")
 
 
 
@@ -57,7 +57,7 @@ raw_files$single_or_paired = "paired-end"
 
 raw_files = raw_files[,-(1:2)] 
 head(raw_files)
-WriteXLS::WriteXLS(raw_files, "raw_files.xlsx")
+WriteXLS::WriteXLS(raw_files, "03_raw_files.xlsx")
 
 
 
@@ -75,7 +75,7 @@ paired_end_experiments$filename2 = paste0(substr(samples[,2], 1, 10), "_R2.fastq
 
 paired_end_experiments = paired_end_experiments[,-(1:2)] 
 head(paired_end_experiments)
-WriteXLS::WriteXLS(paired_end_experiments, "paired_end_experiments.xlsx")
+WriteXLS::WriteXLS(paired_end_experiments, "04_paired_end_experiments.xlsx")
 
 
 
