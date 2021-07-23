@@ -4,8 +4,6 @@ ssh cargo
 
 # cd ~/projects/nme2/results/highfatdiet/geo_submission
 # wget https://www.ncbi.nlm.nih.gov/geo/info/examples/seq_template.xlsx
-# Metadata spreadsheet
-# https://www.ncbi.nlm.nih.gov/geo/info/examples/seq_template.xlsx
 
 GSE_TARGET_NAME=GSE1full 
 
@@ -80,8 +78,6 @@ Rscript generate_metadata.R
 
 cd ~/projects/${project}/results/${gse}/geo_submission
 open seq_template.xlsx
-
-rsync -auvP seq_template_v10_template7_tocomplete.xlsx cargo:/bettik/chuffarf/geo_submission/${gse}/${GSE_TARGET_NAME}/.
 
 rsync -auvP seq_template.xlsx cargo:/bettik/chuffarf/geo_submission/${gse}/${GSE_TARGET_NAME}/.
 
